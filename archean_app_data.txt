@@ -1,0 +1,55 @@
+lib/
+
+    main.dart
+
+    app.dart
+
+    core/
+
+        constants.dart
+
+        theme/
+
+            app_theme.dart
+
+    models/
+
+        drawing_category.dart
+
+        search_result.dart
+
+        query_history.dart
+
+    pages/
+
+        dashboard/
+
+        search/
+
+        drawings/
+
+        history/
+
+        settings/
+
+    widgets/
+
+        dashboard_card.dart
+
+        page_title.dart
+
+        search_box.dart
+
+        side_navigation.dart
+
+    services/
+
+        document_service.dart
+
+        search_service.dart
+
+        history_service.dart
+
+    data/
+
+        sample_drawings.dart
