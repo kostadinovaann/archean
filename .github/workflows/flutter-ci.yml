@@ -40,4 +40,9 @@ jobs:
           fi
 
       - name: Build web output
-        run: cd frontend && flutter build web
+        run: |
+          if [ -d frontend/web ]; then
+            cd frontend && flutter build web
+          else
+            echo "Web not configured, skipping flutter build web."
+          fi
