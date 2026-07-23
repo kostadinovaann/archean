@@ -26,23 +26,27 @@ jobs:
         run: flutter config --enable-web
 
       - name: Get dependencies
-        run: cd frontend && flutter pub get
+        working-directory: frontend
+        run: flutter pub get
 
       - name: Analyze project
-        run: cd frontend && flutter analyze
+        working-directory: frontend
+        run: flutter analyze
 
       - name: Run tests
+        working-directory: frontend
         run: |
-          if [ -d frontend/test ]; then
-            cd frontend && flutter test
+          if [ -d test ]; then
+            flutter test
           else
             echo "No tests found, skipping flutter test."
           fi
 
       - name: Build web output
+        working-directory: frontend
         run: |
-          if [ -d frontend/web ]; then
-            cd frontend && flutter build web
+          if [ -d web ]; then
+            flutter build web
           else
             echo "Web not configured, skipping flutter build web."
           fi

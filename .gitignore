@@ -1,0 +1,12 @@
+# Flutter / Dart
+**/.dart_tool/
+**/build/
+**/.pub-cache/
+
+# IDE / Editor
+.idea/
+.vscode/
+*.iml
+
+# Misc
+*.log
